@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    font-family: "Cedarville Cursive", cursive;
+  }
+  
+  .home-screen {
+    width: 100%;
+    height: 100%;
+    background: url('gr.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-container {
+    perspective: 1000px;
+  }
+  
+  .card {
+    width: 650px;
+    height: 500px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 0.5s;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+  }
+  
+  .card-front {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: white;
+  }
+  
+  .image-side {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-image {
+    max-width: 100%;
+    border: 12px solid white;
+    border-radius: 8px;
+  }
+  
+  .text-side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .text-side h2 {
+    margin-left: 25px;
+    font-size: 32px;
+    color: #333;
+  }
+  
+  .text-side p {
+    margin-left: 25px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .card-back {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    color: #333;
+    transform: rotateY(180deg);
+  }
+  
+  .apology-message h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .apology-message p {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  .card.is-flipped {
+    transform: rotateY(180deg);
+  }
